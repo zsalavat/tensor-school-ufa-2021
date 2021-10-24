@@ -1,0 +1,292 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color:black;
+}
+.wrapper {   
+    min-height: 100%; 
+    overflow: hidden; 
+    display: block;
+     display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1146px;
+    /* padding: 0px 15px; */
+    margin: 0px auto;
+    box-sizing: content-box;
+}
+/* ------шапка---------------- */
+.header {
+    /* position: absolute; */
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    /* background: url(../img/back3.jpg) 0 0/cover  no-repeat; */
+    background: #E3EBFF;
+}
+.header__container {
+    display: flex;    
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-between;  
+}
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: mediumblue;
+}
+.header__logo img{
+    width: 100px;
+}
+.header__menu {
+    margin: 0px 0px 0px 0px;
+}
+ @media (max-width: 400px) {
+    .header__menu {
+        margin: 0px 0px 0px 20px;
+    }
+}
+/*
+@media (max-width: 767px) {
+    .header__menu {
+        margin: 0px 0px 0px 200px;
+    }
+} */
+.menu {
+    padding: 5px 0;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__item:not(:last-child) {
+    margin: 0px 21px 0px 0px;
+}
+
+.menu__link {
+    color:#000;
+    line-height: 24px;
+}
+/* ------page---------------- */
+.page {
+    flex: 1 1 auto;  
+}
+/* advantages */
+.advantages {
+    color: #fff;
+    height: 600px;
+    /* background: url('../img/TensorSchool.jpg') 0 0/cover  no-repeat; */
+    background: url('../img/Тензор.jpg') 0 0/100% 100% no-repeat;
+}
+.advantages__school {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.advantages__container {
+    height: 100%;
+    display: flex;
+    justify-content: end;   
+}
+.advantages__button {
+    
+    background-color: rgba(33, 47, 181, 61%);
+    margin-top: 10px;
+    padding: 5px 8px;
+    color: #fff;
+}
+
+.advantages__button_round {
+    border-radius: 5px;
+}
+.item__advantages {
+    margin-top: 115px;
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(75, 66, 66, 81%);
+    opacity: 90%;
+    padding: 16px 0px;
+    border-radius: 20px;
+}
+
+.item__list {
+    margin-bottom: 30px;
+}
+.item__title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.list__item {
+    list-style: disc;
+    margin-bottom: 16px;
+    font-size: 21px;
+}
+/* teachers */
+.teachers {
+    margin-bottom: 40px;   
+}
+.teachers__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teachers__title {
+    font-size: 36px;
+    margin: 40px 0px 30px 0px;
+}
+.teachers__cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.card__teacher {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 430px;
+    width: 250px;
+    border-radius: 20px;
+    background: rgba(103, 143, 248, 25%);
+}
+.card__teacher_photo {
+    width: 100%;    
+    
+}
+.card__teacher_photo img {
+    max-width: 100%; 
+    height: 250px;
+    border-radius: 20px 20px 0px 0px;
+}
+.card__teacher_name {
+    margin: 20px 0px 20px 0px;
+    font-size: 24px;
+}
+.card__teacher_info-post {
+    
+}
+.card__teacher_info-experience {
+    margin-top: 16px;
+}
+/* courses */
+.courses {
+
+}
+.courses__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.courses__title {
+    font-size: 36px;
+    margin: 40px 0px 30px 0px;
+}
+.courses__cards {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+     flex-wrap: wrap; 
+}
+.card__course {
+    margin-bottom: 45px;;
+    background: rgba(103, 143, 248, 25%);
+    border-radius: 20px;
+    width: 480px;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.card__course_title {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+.card__course_photo {
+    width: 100%;
+}
+
+.card__course_photo img {
+    width: 480px;
+    height: 310px;
+    border-radius: 0px 0px 20px 20px;
+}
+/* ------подвал---------------- */
+.footer {
+    height: 90px;
+    background: #E3EBFF ;
+}
+.footer__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__menu {
+
+}
+.footer__right {
+    height: 100%;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__icons {
+    display: flex;
+    justify-content: space-between;
+}
+.icon__item {
+   margin-left: 15px;
+}
+.icon__item img {
+    height: 35px;
+    width: 35px;
+}
+.footer__tensor {
+    margin-left: 15px;
+}
