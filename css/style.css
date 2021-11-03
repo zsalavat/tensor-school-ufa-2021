@@ -38,11 +38,10 @@ body {
 .wrapper {   
     min-height: 100%; 
     overflow: hidden; 
-    display: block;
-     display: flex;
+    display: flex;
     flex-direction: column;
 }
-._container {
+.container {
     max-width: 1146px;
     /* padding: 0px 15px; */
     margin: 0px auto;
@@ -108,24 +107,24 @@ body {
     flex: 1 1 auto;  
 }
 /* advantages */
-.advantages {
+.advantages-school {
     color: #fff;
     height: 600px;
     /* background: url('../img/TensorSchool.jpg') 0 0/cover  no-repeat; */
     background: url('../img/Тензор.jpg') 0 0/100% 100% no-repeat;
 }
-.advantages__school {
+.advantages-school__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
-.advantages__container {
+.advantages-school__container {
     height: 100%;
     display: flex;
     justify-content: end;   
 }
-.advantages__button {
+.advantages-school__button {
     
     background-color: rgba(33, 47, 181, 61%);
     margin-top: 10px;
@@ -133,10 +132,10 @@ body {
     color: #fff;
 }
 
-.advantages__button_round {
+.advantages-school__button_round {
     border-radius: 5px;
 }
-.item__advantages {
+.card__advantages {
     margin-top: 115px;
     width: 580px;
     display: flex;
@@ -148,10 +147,10 @@ body {
     border-radius: 20px;
 }
 
-.item__list {
+.card__list {
     margin-bottom: 30px;
 }
-.item__title {
+.card__title {
     margin-top: 30px;
     margin-bottom: 20px;
     font-size: 30px;
@@ -181,7 +180,7 @@ body {
     justify-content: space-between;
     
 }
-.card__teacher {
+.teacher-card {
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -191,23 +190,23 @@ body {
     border-radius: 20px;
     background: rgba(103, 143, 248, 25%);
 }
-.card__teacher_photo {
+.teacher-card__photo {
     width: 100%;    
     
 }
-.card__teacher_photo img {
+.teacher-card__photo img {
     max-width: 100%; 
     height: 250px;
     border-radius: 20px 20px 0px 0px;
 }
-.card__teacher_name {
+.teacher-card__name {
     margin: 20px 0px 20px 0px;
     font-size: 24px;
 }
-.card__teacher_info-post {
+.teacher-card__info-post {
     
 }
-.card__teacher_info-experience {
+.teacher-card__info-experience {
     margin-top: 16px;
 }
 /* courses */
@@ -223,14 +222,14 @@ body {
     font-size: 36px;
     margin: 40px 0px 30px 0px;
 }
-.courses__cards {
+.courses__content {
     width: 100%; 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
      flex-wrap: wrap; 
 }
-.card__course {
+.course-card {
     margin-bottom: 45px;;
     background: rgba(103, 143, 248, 25%);
     border-radius: 20px;
@@ -241,15 +240,15 @@ body {
     align-items: center;
     justify-content: end;
 }
-.card__course_title {
+.course-card__title {
     font-size: 24px;
     margin-bottom: 35px;
 }
-.card__course_photo {
+.course-card__photo {
     width: 100%;
 }
 
-.card__course_photo img {
+.course-card__photo img {
     width: 480px;
     height: 310px;
     border-radius: 0px 0px 20px 20px;
