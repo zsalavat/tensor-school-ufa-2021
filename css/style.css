@@ -48,7 +48,6 @@ body.lock {
 }
 .container {
     max-width: 1146px;
-    /* padding: 0px 15px; */
     margin: 0px auto;
     box-sizing: content-box;
 }
@@ -63,8 +62,6 @@ button {
     width: 100%;
     left: 0;
     top: 0; 
-    /* z-index: 0; */
-    /* background: url(../img/back3.jpg) 0 0/cover  no-repeat; */
     background: #E3EBFF;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -72,7 +69,7 @@ button {
     display: flex;    
     min-height: 80px;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;    
 }
 .header__logo {
     font-size: 24px;
@@ -82,36 +79,38 @@ button {
 .header__logo img{
     width: 100px;
 }
-.header__menu {
-    margin: 0px 0px 0px 0px;
-}
- @media (max-width: 400px) {
-    .header__menu {
-        margin: 0px 0px 0px 20px;
-    }
-}
-/*
-@media (max-width: 767px) {
-    .header__menu {
-        margin: 0px 0px 0px 200px;
-    }
-} */
 .menu {
     padding: 5px 0;
 }
 .menu__list {
     display: flex;
     flex-wrap: wrap;
-}
-.menu__item {
+    justify-content: space-evenly;
 }
 .menu__item:not(:last-child) {
-    margin: 0px 21px 0px 0px;
+     margin: 0px 21px 0px 0px; 
 }
 
 .menu__link {
     color:#000;
     line-height: 24px;
+}
+
+@media (max-width: 1190px) {
+    .header__container {
+        margin: 0px 20px 0px 20px;
+    }
+} 
+@media (max-width: 476px) {
+    .header__menu {
+        margin: 0px 0px 0px 50px;
+    }       
+}
+@media (max-width: 434px) {
+    .menu__item:not(:last-child) {
+        margin: 0px 0px 0px 0px; 
+   }
+    
 }
 /* ------page---------------- */
 .page {
@@ -121,7 +120,6 @@ button {
 .advantages-school {
     color: #fff;
     height: 600px;
-    /* background: url('../img/TensorSchool.jpg') 0 0/cover  no-repeat; */
     background: url('../img/Тензор.jpg') 0 0/100% 100% no-repeat;
 }
 .advantages-school__card {
@@ -142,12 +140,12 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     background-color: rgba(75, 66, 66, 81%);
     /* opacity: 90%; */
     padding: 16px 0px;
     border-radius: 20px;
 }
-
 .card__list {
     margin-bottom: 30px;
 }
@@ -161,6 +159,49 @@ button {
     margin-bottom: 16px;
     font-size: 21px;
 }
+@media (max-width: 1190px) {
+    .advantages-school__container {
+        margin: 0px 20px 0px 20px;
+    }
+} 
+@media (max-width: 630px) {
+    .advantages-school__container {
+        justify-content: center;
+    }
+    .card__advantages {
+        width: 420px;
+    }
+    .card__title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .list__item {
+        list-style: none;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    .advantages-school {
+        height: 400px;
+    }
+} 
+@media (max-width: 435px) {
+    .card__advantages {
+        width: 280px;
+    }
+    .card__title {
+        margin-top: 15px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    .list__item {
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .advantages-school {
+        height: 340px;
+    }
+} 
 /* teachers */
 .teachers {
     margin-bottom: 40px;   
@@ -173,24 +214,40 @@ button {
 .teachers__title {
     font-size: 36px;
     margin: 40px 0px 30px 0px;
+    text-align: center;
+    
 }
 .teachers__cards {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
 }
+
 .teacher-card {
     font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 430px;
-    width: 250px;
+    width: 250px;    
     border-radius: 20px;
     background: rgba(103, 143, 248, 25%);
 }
+@media (max-width: 1190px) {
+    .teacher-card {
+        margin: 0px 20px 20px 20px;
+    }
+} 
+@media (max-width: 600px) {
+    .teachers__title {
+        font-size: 28px;
+        margin: 40px 0px 30px 0px;
+        
+    }
+} 
 .teacher-card__photo {
     width: 100%;    
     
@@ -211,9 +268,6 @@ button {
     margin-top: 16px;
 }
 /* courses */
-.courses {
-
-}
 .courses__container {
     display: flex;
     flex-direction: column;
@@ -232,7 +286,7 @@ button {
 }
 
 .course-card {
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
     color: rgb(0, 0, 0);
     background: rgba(103, 143, 248, 25%);
     border-radius: 20px;
@@ -247,6 +301,7 @@ button {
 .course-card__title {
     font-size: 24px;
     margin-bottom: 35px;
+    text-align: center;
 }
 .course-card__photo {
     width: 100%;
@@ -257,171 +312,28 @@ button {
     height: 310px;
     border-radius: 0px 0px 20px 20px;
 }
-/* ------Pop-up---------------- */
-.popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: all 0.8s ease 0s;
-}
-.popup.open {
-    opacity: 1;
-    visibility: visible;
-}
-.popup.open .popup__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    transform: perspective(600px) translate(0px, 0%) rotate(0deg);
-    opacity: 1;
-}
-/* .popup__area {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
-.popup__body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    transition: all 0.8s ease 0s;
-}
-.popup__content {
-    width: 650px;
-    height: 400px;
-    background-color: rgb(249, 249, 249);
-    color: #000;
-    max-width: 800px;
-    padding: 30px;
-    position: relative;
-    transition: all 0.8s ease 0s;;
-    opacity: 0;
-    transform: perspective(600px) translate(0px, -100%) rotate(0deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.popup__close {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 20px;
-    color: #000;
-    text-decoration: none;
-}
-.popup__title {
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.7);
-    /* margin: 0px 0px 1em 0px; */
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.form__item {
-    
-}
-.form__input {
-    height: 40px;
-    width: 400px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 8px;
-    margin-bottom: 20px;
-}
-.form__label {
-    padding: 0px 0px 10px 10px;
-    font-size: 18px;
-}
-
-.form__button {
-    width: 180px;
-    height: 40px;
-    font-size: 20px;
-    border-radius: 15px;
-}
-
-/* ------карта курса---- */
-.course-info {
-    margin-top: 115px;
-    color: #000;
-}
-.course-info__container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-.course-info__text {
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    line-height: 24px;
-    margin-right: 60px;
-
-}
-.course-info__paragraph {
-    margin-bottom: 35px;    
-}
-.course-info__paragraph ol {
-    padding: 0px 0px 0px 30px;
-}
-.course-info__paragraph li {
-    list-style: decimal;    
-}
-.course-info__paragraph h2{
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-.course-info__line {
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 38%);
-    padding-bottom: 4px;
-}
-.course-info__line img {
-   width: 20px;
-   height: 10px;
-}
-.course-info__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.course-interaction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.course-interaction__button{
-    font-size: 18px;
-    height: 37px;
-    width: 268px;
-}
-.course-interaction__button_round{
-    border-radius: 5px;
-}
-.course-interaction__link {
-    margin-top: 8px;
-    color: rgba(0, 0, 0, 74%);
-}
-
+@media (max-width: 999px) {
+    .course-card {
+        margin-bottom: 20px;
+        width: 350px;
+        height: 320px;        
+    }    
+    .course-card__title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }   
+    .course-card__photo img {
+        width: 350px;
+        height: 240px;
+    }
+} 
+@media (max-width: 600px) {
+    .courses__title {
+        font-size: 28px;
+        margin: 40px 0px 30px 0px;
+        
+    }
+} 
 /* ------подвал---------------- */
 .footer {
     height: 90px;
